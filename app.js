@@ -14,3 +14,8 @@ function addTask() {
   input.value = "";
   renderTasks();
 }
+
+function deleteTask(id) {
+    tasks = tasks.filter(task => task.id !== id);
+    renderTasks();
+  }
