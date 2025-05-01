@@ -9,5 +9,20 @@
 
   <h1>🗂️ Task Manager</h1>
 
+  <div class="input-area">
+    <input type="text" id="taskInput" placeholder="Nuova attività...">
+    <button onclick="addTask()">Aggiungi</button>
+  </div>
+
+  <div class="filters">
+    <input type="text" id="searchInput" placeholder="🔍 Cerca attività..." oninput="renderTasks()">
+    <select id="filterStatus" onchange="renderTasks()">
+      <option value="">Tutti</option>
+      <option value="Da fare">Da fare</option>
+      <option value="In corso">In corso</option>
+      <option value="Completata">Completata</option>
+    </select>
+  </div>
+
 </body>
 </html>
