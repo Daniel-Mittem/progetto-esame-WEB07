@@ -36,4 +36,33 @@ function changeStatus(id, nuovoStato) {
       renderTasks();
     }
 }
+
+function renderTasks() {
+    const list = document.getElementById('taskList');
+    const search = document.getElementById('searchInput').value.toLowerCase();
+    const filter = document.getElementById('filterStatus').value;
   
+    list.innerHTML = "";
+  
+    const filteredTasks = tasks
+      .filter(t => t.nome.toLowerCase().includes(search))
+      .filter(t => filter === "" || t.stato === filter);
+  
+    filteredTasks.forEach(task => {
+      const div = document.createElement('div');
+      div.className = 'task';
+  
+      div.innerHTML = `
+        <span>${task.nome} - <strong>${task.stato}</strong></span>
+        <select onchange="changeStatus(${task.id}, this.value)">
+          <option value="Da fare" ${task.stato === "Da fare" ? "selected" : ""}>Da fare</option>
+          <option value="In corso" ${task.stato === "In corso" ? "selected" : ""}>In corso</option>
+          <option value="Completata" ${task.stato === "Completata" ? "selected" : ""}>Completata</option>
+        </select>
+        <button onclick="editTask(${task.id})">Modifica</button>
+        <button onclick="deleteTask(${task.id})">Elimina</button>
+        `;
+  
+      list.appendChild(div);
+    });
+  }
