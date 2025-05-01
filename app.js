@@ -28,4 +28,12 @@ function editTask(id) {
       renderTasks();
     }
 }
+
+function changeStatus(id, nuovoStato) {
+    const task = tasks.find(t => t.id === id);
+    if (task) {
+      task.stato = nuovoStato;
+      renderTasks();
+    }
+}
   
