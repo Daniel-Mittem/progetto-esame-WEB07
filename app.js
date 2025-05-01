@@ -18,4 +18,14 @@ function addTask() {
 function deleteTask(id) {
     tasks = tasks.filter(task => task.id !== id);
     renderTasks();
-  }
+}
+
+function editTask(id) {
+    const nuovoNome = prompt("Modifica il nome dell'attività:");
+    if (nuovoNome && nuovoNome.trim() !== "") {
+      const task = tasks.find(t => t.id === id);
+      if (task) task.nome = nuovoNome.trim();
+      renderTasks();
+    }
+}
+  
