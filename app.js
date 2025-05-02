@@ -40,4 +40,16 @@ function reset() {
     document.getElementById('display').textContent = '00:00:00';
     document.getElementById('laps').innerHTML = '';
 }
+
+function lap() {
+    if (!interval) return;
+  
+    const now = Date.now();
+    const current = now - startTime + elapsedTime;
+    const lapTime = formatTime(current);
+  
+    const li = document.createElement('li');
+    li.textContent = `Giro ${document.getElementById('laps').children.length + 1}: ${lapTime}`;
+    document.getElementById('laps').appendChild(li);
+}
   
