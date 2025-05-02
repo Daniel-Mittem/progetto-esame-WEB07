@@ -24,4 +24,12 @@ function start() {
   startTime = Date.now();
   interval = setInterval(updateDisplay, 10);
 }
+
+function stop() {
+    if (!interval) return;
+    clearInterval(interval);
+    interval = null;
+    elapsedTime += Date.now() - startTime;
+}
+  
   
