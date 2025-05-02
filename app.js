@@ -31,5 +31,13 @@ function stop() {
     interval = null;
     elapsedTime += Date.now() - startTime;
 }
-  
+
+function reset() {
+    clearInterval(interval);
+    interval = null;
+    startTime = 0;
+    elapsedTime = 0;
+    document.getElementById('display').textContent = '00:00:00';
+    document.getElementById('laps').innerHTML = '';
+}
   
