@@ -41,12 +41,12 @@ button {
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s, transform 0.1s ease;
-  }
+}
   
-  button:hover {
+button:hover {
     background: linear-gradient(to right, #2563eb, #1d4ed8);
     transform: scale(1.05);
-  }
+}
   
 #weatherInfo {
     margin-top: 25px;
@@ -54,6 +54,12 @@ button {
     color: #374151;
     line-height: 1.6;
     animation: fadeIn 0.5s ease-in-out;
+}
+
+.weather-icon {
+    font-size: 64px;
+    margin-bottom: 15px;
+    color: #facc15; 
 }
   
 @keyframes fadeIn {
