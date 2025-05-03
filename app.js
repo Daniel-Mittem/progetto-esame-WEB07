@@ -13,3 +13,14 @@ const weatherIcons = {
   95: "⛈️ Temporale",
 
 };
+
+function getWeather() {
+    weatherInfo.innerHTML = "📡 Caricamento meteo...";
+  
+    if (!navigator.geolocation) {
+      weatherInfo.innerHTML = "⚠️ Geolocalizzazione non supportata dal browser.";
+      return;
+    }
+  
+    navigator.geolocation.getCurrentPosition(success, error);
+}
