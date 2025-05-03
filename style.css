@@ -10,3 +10,18 @@ body {
     align-items: center;
     min-height: 100vh;
 } 
+
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+  
+.container:hover {
+    transform: translateY(-4px);
+}
