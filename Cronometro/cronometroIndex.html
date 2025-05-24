@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cronometro</title>
+  <link rel="stylesheet" href="cronometroStyle.css">
+  <script src="cronometroApp.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+      <h1>⏱️ Cronometro</h1>
+      <div id="display">00:00:00</div>
+  
+      <div class="buttons">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+        <button onclick="lap()">Giro</button>
+      </div>
+  
+      <ul id="laps"></ul>
+    </div>
+   
+</body>
+</html>
