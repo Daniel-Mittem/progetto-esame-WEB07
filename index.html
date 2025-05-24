@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Miei Progetti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <h1 class="title">I Miei Progetti</h1>
+        <p class="subtitle">Scegli un progetto per iniziare</p>
+        
+        <div class="projects-grid">
+            <div class="project-card" onclick="openProject('cronometro')">
+                <div class="project-icon cronometro">⏱️</div>
+                <h2 class="project-title">Cronometro</h2>
+                <p class="project-description">Cronometro digitale con funzioni di start, stop e reset per misurare il tempo con precisione.</p>
+            </div>
+            
+            <div class="project-card" onclick="openProject('taskManager')">
+                <div class="project-icon task-manager">📋</div>
+                <h2 class="project-title">Task Manager</h2>
+                <p class="project-description">Gestisci le tue attività quotidiane con questo task manager intuitivo e completo.</p>
+            </div>
+            
+            <div class="project-card" onclick="openProject('meteo')">
+                <div class="project-icon meteo">🌤️</div>
+                <h2 class="project-title">Meteo</h2>
+                <p class="project-description">Controlla le previsioni del tempo e le condizioni meteorologiche attuali.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
